@@ -2,8 +2,8 @@
 * GLM 1 solution code *
 *---------------------*
 
-* set working directory
-cd "S:\ICH_PPP_CENB_CEBCH\Rachel Pearson\Teaching\GLM 1 materials"
+* set working directory CHANGE THIS
+cd "C:\your\file\path"
 
 
 * get data
