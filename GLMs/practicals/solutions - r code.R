@@ -68,16 +68,12 @@ tidy(ae_mod_3,
 #----------------#
 
 # 3A:
-table(dat$death)
-
-
-# 3B:
 print(CreateTableOne(data = dat, 
                      strata = "death",
                      vars = c("imd5"),
                      test = FALSE))
 
-# 3C:
+# 3B:
 death_mod_1 <- glm(data = dat,
                    formula = death ~ imd5,
                    family = binomial(link = "logit"))
@@ -87,7 +83,7 @@ tidy(death_mod_1,
      conf.int = TRUE) 
 
 
-# 3D:
+# 3C:
 death_mod_2 <- glm(data = dat,
                    formula = death ~ imd5 + age + sex,
                    family = binomial(link = "logit"))
@@ -96,7 +92,7 @@ tidy(death_mod_2,
      exponentiate = TRUE,  
      conf.int = TRUE) 
 
-# 3E:
+# 3D:
 death_mod_3 <- glm(data = dat,
                    formula = death ~ imd5 + age + sex + cvd,
                    family = binomial(link = "logit"))
